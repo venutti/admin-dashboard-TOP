@@ -4,23 +4,34 @@
 
 body {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 4fr ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+@media (min-width: 650px) {
+    body {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
 }
 
 .nav {
     border: 1px dashed red;
-    grid-row: 1 / -1;
 }
-
+@media (min-width: 650px) {
+    .nav {
+        grid-row:1 / span 2 ;
+    }
+}
 .header {
     border: 1px dashed blue;
-    grid-column: 2 / -1;
+}
+@media (min-width: 650px) {
+    .header {
+        grid-column: 2 / span 2;
+    }
 }
 
 .main {
     border: 1px dashed green;
-    grid-column: 2 / span 2;
 }
 
 .general {
