@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+:root {
+    --primary-dark : #365314;
+    --primary-ligth: #A3E635;
+    --secondary-dark: #CE5F1A;
+    --secondary-ligth: #F59E0B;
+}
+
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -13,14 +22,69 @@ body {
     }
 }
 
+.logo,
+.icon {
+    display: inline-block;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: var(--primary-ligth);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-dark);
+}
+/*NAVIGATION*/
 .nav {
-    border: 1px dashed red;
+    background-color: var(--primary-dark);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 2rem 0 1rem;
 }
 @media (min-width: 650px) {
     .nav {
         grid-row:1 / span 2 ;
     }
 }
+.nav .title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+.nav .title h1 {
+    margin: 0;
+}
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin: 1rem;
+    display: grid;
+    gap: 5px;
+}
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav a:hover {
+    color: var(--secondary-ligth);
+}
+.nav a:hover .icon{
+    background-color: var(--secondary-dark);
+}
+
+/*HEADER*/
 .header {
     border: 1px dashed blue;
 }
