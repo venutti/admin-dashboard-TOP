@@ -1,0 +1,28 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 4fr ;
+}
+
+.nav {
+    border: 1px dashed red;
+    grid-row: 1 / -1;
+}
+
+.header {
+    border: 1px dashed blue;
+    grid-column: 2 / -1;
+}
+
+.main {
+    border: 1px dashed green;
+    grid-column: 2 / span 2;
+}
+
+.general {
+    border: 1px dashed orange;
+}
