@@ -2,9 +2,10 @@
 
 :root {
     --primary-dark : rgb(0, 0, 0);
-    --primary-ligth: rgb(56, 56, 56);
+    --primary-ligth: rgb(138, 137, 137);
     --secondary-dark: rgb(206, 95, 26);
     --secondary-ligth: rgb(245, 158, 11);
+    --secondary-dark-transparent: rgba(206, 95, 26, .7);
     --secondary-ligth-transparent: rgba(245, 158, 11, .7);
 }
 
@@ -189,15 +190,12 @@ body {
     background-color: var(--primary-ligth);
     padding: 1rem;
 }
+.general h2,
 .main h2 {
-    color: white;
+    color: black;
     margin-top: 1rem;
 }
 .projects {
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 1.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
@@ -256,4 +254,25 @@ body {
 }
 .projects .card .url-buttons .icon:hover {
     background-color: var(--secondary-ligth);
+}
+
+.announcements,
+.trending {
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--secondary-dark);
+    background-color: var(--secondary-ligth-transparent);
+}
+.announcements h3,
+.announcements p {
+    margin: 0;
+}
+.announcements h3 {
+    margin-bottom: .5rem;
+}
+.announcements hr {
+    margin: 1rem auto;
+    color: white;
+    background-color: white;
+    width: 90%;
 }
